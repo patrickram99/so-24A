@@ -23,7 +23,6 @@
 *.fdb_latexmk
 *.synctex.gz
 *.synctex(busy)
-*.pdfsync
 
 # Intermediate documents
 *-blx.bib
