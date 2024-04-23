@@ -1,5 +1,5 @@
 %package list
-\documentclass[draft]{article}
+\documentclass{article}
 \usepackage[top=3cm, bottom=3cm, outer=3cm, inner=3cm]{geometry}
 \usepackage{graphicx}
 \usepackage{url}
@@ -10,13 +10,13 @@
 \newcolumntype{x}[1]{>{\centering\arraybackslash\hspace{0pt}}p{#1}}
 \usepackage{natbib}
 \usepackage{pdfpages}
-\usepackage[export]{adjustbox}
-% \usepackage{multirow}
+\usepackage{multirow}
+\usepackage{multirow}
 \usepackage[T1]{fontenc}
 \usepackage{imakeidx}
 % Imagenes de costado
-% \usepackage{wrapfig}
-% \usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{graphicx}
 
 % Modificar URLs
 \usepackage{hyperref}
@@ -92,7 +92,7 @@
 \setlength{\headheight}{30pt}
 \renewcommand{\headrulewidth}{1pt}
 \renewcommand{\footrulewidth}{1pt}
-\fancyhead[L]{\raisebox{-0.2\height}{\includegraphics[width=3cm]{logo_ulasalle.png}}}
+\fancyhead[L]{\raisebox{-0.2\height}{\includegraphics[width=3cm]{logo_ulasalle (1).png}}}
 \fancyhead[C]{}
 \fancyhead[R]{\fontsize{7}{7}\selectfont	\csuniversidad \\ \csescuela \\ \textbf{\cscurso} }
 \fancyfoot[L]{}
@@ -106,7 +106,7 @@
 	\vspace*{10px}
 	
 	\begin{center}	
-		\fontsize{17}{17} \textbf{ ASANSDJNA, \cspracnr}
+		\fontsize{17}{17} \textbf{ Práctica \cspracnr}
 	\end{center}
 	%\centerline{\textbf{\underline{\Large Título: Informe de revisión del estado del arte}}}
 	%\vspace*{0.5cm}
@@ -156,7 +156,7 @@
         $ dpkg -l git vim openjdk-17-jdk gcc g++
         \end{minted}
 
-\section{Cuadrilla KEKW}
+\section{Cuadrilla Imagenes}
     \begin{tabular}{cc}
         \includegraphics[width=.4\linewidth,valign=m]{capturas_paquetes/sublime.png} & \includegraphics[width=.4\linewidth,valign=m]{capturas_paquetes/vscode.png} \\
         Sublime & VS Code \\
