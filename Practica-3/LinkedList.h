@@ -3,7 +3,7 @@
 #include "ListNode.h"
 #include <iostream>
 
-Class LinkedList {
+class LinkedList {
 private:
   ListNode *_phead;
 
@@ -13,5 +13,5 @@ public:
   void print(void);
 
   void deleteAll(void);
-  void deleteNodes(ListNode * pn);
+  void deleteNodes(ListNode* pn);
 };
