@@ -1,0 +1,55 @@
+# Generic files to ignore
+*.log
+*.aux
+*.glo
+*.idx
+*.log
+*.toc
+*.ist
+*.acn
+*.acr
+*.alg
+*.bbl
+*.blg
+*.dvi
+*.glg
+*.gls
+*.ilg
+*.ind
+*.lof
+*.lot
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex(busy)
+*.pdfsync
+
+# Intermediate documents
+*-blx.bib
+*_latexmk
+*~.nav
+*~.snm
+*~.vrb
+
+# LaTeX 3
+*.auxlock
+*.lox
+
+# PDF output
+
+# pythontex files
+*.pytxcode
+
+# minted package output
+_minted*
+
+# vscode files for LaTeX Workshop extension
+.vscode/
+
+# Temporary files possibly containing sensitive information
+*.swp
+*.swo
+
+# End of .gitignore
+
