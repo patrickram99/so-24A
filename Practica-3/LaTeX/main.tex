@@ -214,41 +214,62 @@ seguir los siguientes comandos, luego se muestra el contenido del Makefile:
 
 
 \section{Cuestionario}
-        \subsection{¿Cuál es la diferencia entre compilar con GCC y G++?}
-        \begin{itemize}
-            \item GCC es el compilador de GNU para C y otros lenguajes, mientras que G++ es especificamente el compilador de GNU para C++. La principal diferencia es en el lenguaje de programacion para el cual estan optimizados, ademas que G++ automaticamente vincula las bibliotecas estandar de C++ que no estan vinculadas por GCC
-       \end{itemize}
-        \subsection{¿En que se difrencia el archivo generado .o contra un .exe}
+\begin{enumerate}
 
-        \begin{itemize}
-            \item Un archivo. o es un archivo de objeto, resultado de compilar archivo de código fuente pero sin enlazarlo. Los archivos de objeto contienen código máquina (binario), y no son ejecutables por sí mismos, ya que dependen de otros archivos.
-            \item Un archivo .exe es un archivo ejecutable completo, resultado del proceso  de enlazado de uno o varios archivos de objeto, junto con todas las bibliotecas necesarias para formar un programa que puede ser ejecutado por el sistema operativo.
-        \end{itemize}
+	\item ¿Cuál es la diferencia entre compilar con GCC y G++? \\
+	GCC es el compilador de GNU para C y otros lenguajes, mientras que G++ 
+	es especificamente el compilador de GNU para C++. La principal diferencia
+	 es en el lenguaje de programacion para el cual estan optimizados, ademas 
+	 que G++ automaticamente vincula las bibliotecas estandar de C++ que no 
+	 estan vinculadas por GCC
+
+	\item ¿En que se diferencia el archivo generado .o contra un .exe
+
+	\begin{itemize}
+		\item Un archivo. o es un archivo de objeto, resultado de compilar 
+		archivo de código fuente pero sin enlazarlo. Los archivos de objeto 
+		contienen código máquina (binario), y no son ejecutables por sí mismos,
+		ya que dependen de otros archivos.
+		\item Un archivo .exe es un archivo ejecutable completo, resultado del 
+		proceso  de enlazado de uno o varios archivos de objeto, junto con todas
+		las bibliotecas necesarias para formar un programa que puede ser 
+		ejecutado por el sistema operativo.
+	\end{itemize}
+
+	\item ¿Explique cuál es la diferencia entre el proceso de compilación y 
+	enlazado? Proponga un ejemplo en haga uso de más de un archivo donde se 
+	evidencie ambos procesos.
+	\begin{itemize}
+		\item La compilación es la conversión del código fuente a código objeto, 
+		mientras que el enlazado es la unión de varios archivos de código objeto
+		en un ejecutable.
+		\item En el Ejemplo N°2 se puede ver cómo el Makefile enlaza varios 
+		archivos para compilar correctamente el programa final.
+	\end{itemize}
+\end{enumerate}
+
+
         
-        \subsection{¿Explique cuál es la diferencia entre el proceso de compilación y enlazado? Proponga un ejemplo en haga uso de más de un archivo donde se evidencie ambos procesos.}
-        \begin{itemize}
-            \item La compilación es la conversión del código fuente a código objeto, mientras que el enlazado es la unión de varios archivos de código objeto en un ejecutable.
-            \item En el Ejemplo N°2 se puede ver cómo el Makefile enlaza varios archivos para compilar correctamente el programa final.
-        \end{itemize}
-        
-        \clearpage
-        \section{Conclusiones}
-        \begin{itemize}
-            \item Utilizando la salida de Valgrind, identificamos problemas críticos de manejo de memoria, como lecturas y liberaciones inválidas, y fugas de memoria relacionadas con las operaciones en tus clases ListNode y LinkedList.
-            \item A través de los ejercicios realizados, se observó la importancia de la correcta utilización de las herramientas de compilación como GCC y G++ para manejar adecuadamente las dependencias y particularidades de cada lenguaje.
-            \item La implementación de archivos CMakeLists.txt y Makefile en los ejercicios demostró cómo la automatización del proceso de compilación y enlazado mejora la eficiencia del desarrollo y permite una gestión más clara de los proyectos grandes.
-            \item El manejo correcto de múltiples archivos en el proceso de compilación y enlazado fue crucial para la construcción exitosa de aplicaciones, destacando la importancia de entender ambos procesos para resolver dependencias y errores de enlazado.
-        \end{itemize}
-        \section{Recomendaciones}
-        \begin{itemize}
-            \item Se sugirió evitar métodos recursivos de eliminación en estructuras de datos que potencialmente podrían ser muy largas para prevenir desbordamientos de pila.
+\section{Conclusiones}
+    \begin{itemize}
+        \item Utilizando la salida de Valgrind, identificamos problemas críticos de manejo de memoria, como lecturas y liberaciones inválidas, y fugas de memoria relacionadas con las operaciones en tus clases ListNode y LinkedList.
+        \item A través de los ejercicios realizados, se observó la importancia de la correcta utilización de las herramientas de compilación como GCC y G++ para manejar adecuadamente las dependencias y particularidades de cada lenguaje.
+        \item La implementación de archivos CMakeLists.txt y Makefile en los ejercicios demostró cómo la automatización del proceso de compilación y enlazado mejora la eficiencia del desarrollo y permite una gestión más clara de los proyectos grandes.
+        \item El manejo correcto de múltiples archivos en el proceso de compilación y enlazado fue crucial para la construcción exitosa de aplicaciones, destacando la importancia de entender ambos procesos para resolver dependencias y errores de enlazado.
+    \end{itemize}
+
+\section{Recomendaciones}
+    \begin{itemize}
+        \item Se sugirió evitar métodos recursivos de eliminación en estructuras de datos que potencialmente podrían ser muy largas para prevenir desbordamientos de pila.
 Se enfatizó la importancia de asegurar que cada operación de new tenga su correspondiente delete para evitar fugas de memoria.
-            \item  Es recomendable utilizar herramientas como CMake para gestionar proyectos más complejos, ya que simplifican y estandarizan el proceso de compilación y enlazado en diferentes entornos de desarrollo.
-            \item Mantenerse actualizado sobre las mejores prácticas y nuevas características de las herramientas de compilación puede ayudar a optimizar el rendimiento y la eficiencia del código.
-            \item Realizar pruebas exhaustivas durante y después del proceso de desarrollo para asegurarse de que el código funciona correctamente en diferentes plataformas y configuraciones de compilación.
-        \end{itemize}
+        \item  Es recomendable utilizar herramientas como CMake para gestionar proyectos más complejos, ya que simplifican y estandarizan el proceso de compilación y enlazado en diferentes entornos de desarrollo.
+        \item Mantenerse actualizado sobre las mejores prácticas y nuevas características de las herramientas de compilación puede ayudar a optimizar el rendimiento y la eficiencia del código.
+        \item Realizar pruebas exhaustivas durante y después del proceso de desarrollo para asegurarse de que el código funciona correctamente en diferentes plataformas y configuraciones de compilación.
+	\end{itemize}
+
 \renewcommand{\listlistingname}{Indice Source Code}
 \listoflistings
+\addcontentsline{toc}{section}{\listlistingname}
 
 % \section{Cuadrilla KEKW}
 %    \begin{tabular}{cc}
