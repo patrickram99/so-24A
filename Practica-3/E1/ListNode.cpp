@@ -6,5 +6,4 @@ ListNode::ListNode() {
 }
 
 ListNode::~ListNode() {
-    delete _pnext;
 }

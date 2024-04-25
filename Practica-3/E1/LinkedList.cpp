@@ -1,5 +1,6 @@
 // CREAR ARCHIVO LinkedList.cpp
 #include "LinkedList.h"
+
 LinkedList::LinkedList() {
     _phead = nullptr;
 }
@@ -40,12 +41,14 @@ void LinkedList::print(void) {
 void LinkedList::deleteAll(void) {
     if (_phead != nullptr) {
         deleteNodes(_phead);
+        _phead = nullptr;
     }
 }
 
 void LinkedList::deleteNodes(ListNode *pn) {
-    if (pn -> _pnext != nullptr) {
+    if (pn != nullptr) {
         deleteNodes(pn->_pnext);
+        delete pn;
+        pn = nullptr;
     }
-    delete(pn);
 }
