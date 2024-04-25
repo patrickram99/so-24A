@@ -1,3 +1,0 @@
-/home/pat/uls-24A/operating_systems/Practica-3/E1/cmake-build-debug/CMakeFiles/E1.dir
-/home/pat/uls-24A/operating_systems/Practica-3/E1/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/pat/uls-24A/operating_systems/Practica-3/E1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
