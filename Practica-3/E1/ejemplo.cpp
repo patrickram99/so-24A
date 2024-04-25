@@ -1,4 +1,3 @@
-// CREAR ARCHIVO ejemplo.cpp
 #include <functional>
 #include <iostream>
 

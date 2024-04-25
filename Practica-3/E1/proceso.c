@@ -1,4 +1,3 @@
-// CREAR ARCHIVO proceso1.c
 #include <stdio.h>
 #include <sys/types.h>
 #include <sys/wait.h>
