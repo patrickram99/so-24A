@@ -4,7 +4,7 @@
 
 int main() {
     int max = 10;
-    LinkedList* plist = new LinkedList();
+    auto* plist = new LinkedList();
 
     for (int i = 0; i < max; i++) {
         int num = rand()%max;
