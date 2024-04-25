@@ -156,6 +156,19 @@
         $ dpkg -l git vim openjdk-17-jdk gcc g++
         \end{minted}
 
+\section{Source Code}
+\begin{code}
+	\captionof{listing}{E3/mensaje.c}
+	\inputminted{c}{../E3/mensaje.c}
+\end{code}
+
+\section{Capturas}
+\begin{figure}[h]
+\caption{Compilación y ejecución del ejercicio 3 con MakeFile}
+\centering
+\includegraphics[scale=0.3,trim={0 0 20cm 19cm},clip]{e3-out.png}
+\end{figure}
+
 \section{Cuadrilla Imagenes}
     \begin{tabular}{cc}
         \includegraphics[width=.4\linewidth,valign=m]{capturas_paquetes/sublime.png} & \includegraphics[width=.4\linewidth,valign=m]{capturas_paquetes/vscode.png} \\
@@ -169,5 +182,13 @@
 	%\bibliographystyle{IEEEtranN}
 	%\bibliography{bibliography}
 		
-	
+
+\renewcommand{\listlistingname}{Indice Source Code}
+\listoflistings
+\addcontentsline{toc}{section}{\listlistingname}
+
+\renewcommand{\listfigurename}{Indice de Capturas de Pantalla}
+\listoffigures 
+\addcontentsline{toc}{section}{\listfigurename} 
+
 \end{document}
