@@ -36,6 +36,7 @@
 *.lox
 
 # PDF output
+*.htm
 
 # pythontex files
 *.pytxcode
@@ -51,4 +52,8 @@ _minted*
 *.swo
 
 # End of .gitignore
+# Ignore the CMake build directory
+/cmake-build-debug/
 
+# Ignore all .o files
+*.o
