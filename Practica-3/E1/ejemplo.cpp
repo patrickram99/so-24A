@@ -16,12 +16,14 @@ public:
   operator int() { return a; }
 };
 
-void funcion(int a) { std::cout << "funcion (int) ejecutada"; }
+void function(int a) { std::cout << "funcion (int) ejecutada"; }
 
-void funcion(Laboratorio la) { std::cout << "Funcion (Laboratorio) ejecutada"; }
+void function(Laboratorio la) {
+  std::cout << "Funcion (Laboratorio) ejecutada";
+}
 
 int main() {
   Practica p;
-  funcion(p);
+  function((Laboratorio)p);
   return 0;
 }
