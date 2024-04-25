@@ -167,7 +167,52 @@ con los siguientes comandos desde el directorio con los archivos:
 	\inputminted{cmake}{../E1/CMakeLists.txt}
 \end{code}
 
-\subsubsection*{proceso.cpp}
+A continuación los archivos que se usaron y los resultados de la compilación y ejecución:
+
+\subsubsection*{LinkedList.h}
+\begin{code}
+	\captionof{listing}{Contenidos Makefile}
+	\inputminted{c}{../E1/LinkedList.h}
+\end{code}
+
+\subsubsection*{LinkedList.cpp}
+\begin{code}
+	\captionof{listing}{Contenidos Makefile}
+	\inputminted{cpp}{../E1/LinkedList.cpp}
+\end{code}
+
+\subsubsection*{ListNode.cpp}
+\begin{code}
+	\captionof{listing}{Contenidos Makefile}
+	\inputminted{cpp}{../E1/ListNode.cpp}
+\end{code}
+
+\subsubsection*{ListNode.h}
+\begin{code}
+	\captionof{listing}{Contenidos Makefile}
+	\inputminted{c}{../E1/ListNode.h}
+\end{code}
+
+\subsubsection*{main.cpp}
+Este código utiliza los anteriores archivos para generar una Linked List e imprimir sus elementos para finalmente borrarla.
+\begin{code}
+	\captionof{listing}{Contenidos Makefile}
+	\inputminted{cpp}{../E1/main.cpp}
+\end{code}
+
+\begin{figure}[h]
+\caption{Compilación del ejercicio 1 con CMake}
+\centering
+\includegraphics[scale=0.4,trim={0 0 20cm 20cm},clip]{e1-comp.png}  
+\end{figure}
+
+\begin{figure}[h]
+\caption{Salida del ejercicio 1 con CMake}
+\centering
+\includegraphics[scale=0.4,trim={0 0 20cm 20cm},clip]{e1-out.png}  
+\end{figure}
+
+\subsubsection*{proceso.c}
 Este código crea un proceso hijo que imprime un mensaje en pantalla.
 \begin{code}
 	\captionof{listing}{Contenidos Makefile}
@@ -183,6 +228,8 @@ una funcion especifica en base a ello:
 	\inputminted{c}{../E1/ejemplo.cpp}
 \end{code}
 
+
+
 \subsection{Ejercicio 2}
 Este código recibe 2 argumentos vía línea de comandos, el primero es un 
 número de segundos y el segundo es un mensaje, el código espera el tiempo
@@ -193,12 +240,33 @@ de forma indefinida.
 	\inputminted{cpp}{../E2/main.cpp}
 \end{code}
 
-\includegraphics[scale=0.3,trim={0 0 20cm 20cm},clip]{e2-out.png}  
+\begin{figure}[h]
+\caption{Compilación y ejecución del ejercicio 2 con G++}
+\centering
+\includegraphics[scale=0.4,trim={0 0 20cm 20cm},clip]{e2-out.png}  
+\end{figure}
+
 
 \subsection{Ejercicio 3}
 En este ejercicio se utiliza un Makefile para compilar el archivo mensaje.c
 y los archivos que este requiere para ejecutarse, para ejecutarlo se deben 
 seguir los siguientes comandos, luego se muestra el contenido del Makefile:
+
+\begin{code}
+	\captionof{listing}{E3/salida\_alt.h}
+	\inputminted{c}{../E3/salida_alt.h}
+\end{code}
+
+\begin{code}
+	\captionof{listing}{E3/salida\_alt.c}
+	\inputminted{c}{../E3/salida_alt.c}
+\end{code}
+
+\begin{code}
+	\captionof{listing}{E3/mensaje.c}
+	\inputminted{c}{../E3/mensaje.c}
+\end{code}
+
 \begin{minted}{bash}
 	$ make # Compilar el proyecto con el makefile
 	$ ./mensaje # Ejecutar el proyecto
@@ -209,8 +277,13 @@ seguir los siguientes comandos, luego se muestra el contenido del Makefile:
 	\label{code:c-code}
 	\inputminted{Makefile}{../E3/Makefile}
 \end{code}
-		
-\includegraphics[scale=0.3,trim={0 0 20cm 20cm},clip]{e2-out.png}  
+\\	
+
+\begin{figure}[h]
+\caption{Compilación y ejecución del ejercicio 3 con MakeFile}
+\centering
+\includegraphics[scale=0.4,trim={0 0 20cm 20cm},clip]{e3-out.png}  
+\end{figure}
 
 
 \section{Cuestionario}
