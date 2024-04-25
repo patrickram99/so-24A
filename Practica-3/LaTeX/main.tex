@@ -163,71 +163,77 @@ con los siguientes comandos desde el directorio con los archivos:
 \end{minted}
 
 \begin{code}
-	\captionof{listing}{Contenidos Makefile}
+	\captionof{listing}{E1/CMakeLists.txt}
 	\inputminted{cmake}{../E1/CMakeLists.txt}
 \end{code}
 
 A continuación los archivos que se usaron y los resultados de la compilación y ejecución:
 
-\subsubsection*{LinkedList.h}
 \begin{code}
-	\captionof{listing}{Contenidos Makefile}
+	\captionof{listing}{E1/LinkedList.h}
 	\inputminted{c}{../E1/LinkedList.h}
 \end{code}
 
-\subsubsection*{LinkedList.cpp}
 \begin{code}
-	\captionof{listing}{Contenidos Makefile}
+	\captionof{listing}{E1/LinkedList.cpp}
 	\inputminted{cpp}{../E1/LinkedList.cpp}
 \end{code}
 
-\subsubsection*{ListNode.cpp}
 \begin{code}
-	\captionof{listing}{Contenidos Makefile}
+	\captionof{listing}{E1/ListNode.cpp}
 	\inputminted{cpp}{../E1/ListNode.cpp}
 \end{code}
 
-\subsubsection*{ListNode.h}
 \begin{code}
-	\captionof{listing}{Contenidos Makefile}
+	\captionof{listing}{E1/ListNode.h}
 	\inputminted{c}{../E1/ListNode.h}
 \end{code}
 
-\subsubsection*{main.cpp}
+\subsubsection*{Archivo ejecutable}
 Este código utiliza los anteriores archivos para generar una Linked List e imprimir sus elementos para finalmente borrarla.
 \begin{code}
-	\captionof{listing}{Contenidos Makefile}
+	\captionof{listing}{E1/main.cpp}
 	\inputminted{cpp}{../E1/main.cpp}
 \end{code}
 
 \begin{figure}[h]
 \caption{Compilación del ejercicio 1 con CMake}
 \centering
-\includegraphics[scale=0.4,trim={0 0 20cm 20cm},clip]{e1-comp.png}  
+\includegraphics[scale=0.4,trim={0 0 20cm 16cm},clip]{e1-comp.jpg}  
 \end{figure}
 
 \begin{figure}[h]
 \caption{Salida del ejercicio 1 con CMake}
 \centering
-\includegraphics[scale=0.4,trim={0 0 20cm 20cm},clip]{e1-out.png}  
+\includegraphics[scale=0.4,trim={0 0 20cm 13cm},clip]{e1-out.jpg}  
 \end{figure}
 
 \subsubsection*{proceso.c}
 Este código crea un proceso hijo que imprime un mensaje en pantalla.
 \begin{code}
-	\captionof{listing}{Contenidos Makefile}
+	\captionof{listing}{E1/proceso.c}
 	\inputminted{c}{../E1/proceso.c}
 \end{code}
 
+\begin{figure}[h]
+	\caption{Compilación y ejecución de proceso.c con GCC}
+	\centering
+	\includegraphics[scale=0.3,trim={0 0 20cm 27cm},clip]{e1-proceso-out.png}  
+	\end{figure}
 
 \subsubsection*{ejemplo.cpp}
 Este código utiliza polimorfismo para detectar el tipo de un objeto e imprimir
 una funcion especifica en base a ello:
 \begin{code}
-	\captionof{listing}{Contenidos Makefile}
+	\captionof{listing}{E1/ejemplo.cpp}
 	\inputminted{c}{../E1/ejemplo.cpp}
 \end{code}
 
+\begin{figure}[h]
+	\caption{Compilación y ejecución de ejemplo.cpp con G++}
+	\centering
+	\includegraphics[scale=0.3,trim={0 0 20cm 27cm},clip]{e1-ejemplo-out.png}  
+\end{figure}
 
 
 \subsection{Ejercicio 2}
@@ -239,12 +245,13 @@ de forma indefinida.
 	\captionof{listing}{E2/main.cpp}
 	\inputminted{cpp}{../E2/main.cpp}
 \end{code}
-
+\newpage
 \begin{figure}[h]
-\caption{Compilación y ejecución del ejercicio 2 con G++}
-\centering
-\includegraphics[scale=0.4,trim={0 0 20cm 20cm},clip]{e2-out.png}  
+	\caption{Compilación y ejecución del ejercicio 2 con G++}
+	\centering
+	\includegraphics[scale=0.3,trim={0 0 20cm 15cm},clip]{e2-out.png}  
 \end{figure}
+
 
 
 \subsection{Ejercicio 3}
@@ -274,18 +281,16 @@ seguir los siguientes comandos, luego se muestra el contenido del Makefile:
 
 \begin{code}
 	\captionof{listing}{E3/Makefile}
-	\label{code:c-code}
 	\inputminted{Makefile}{../E3/Makefile}
 \end{code}
-\\	
 
 \begin{figure}[h]
 \caption{Compilación y ejecución del ejercicio 3 con MakeFile}
 \centering
-\includegraphics[scale=0.4,trim={0 0 20cm 20cm},clip]{e3-out.png}  
+\includegraphics[scale=0.3,trim={0 0 20cm 19cm},clip]{e3-out.png}
 \end{figure}
 
-
+\newpage
 \section{Cuestionario}
 \begin{enumerate}
 
@@ -325,7 +330,6 @@ seguir los siguientes comandos, luego se muestra el contenido del Makefile:
         
 \section{Conclusiones}
     \begin{itemize}
-        \item Utilizando la salida de Valgrind, identificamos problemas críticos de manejo de memoria, como lecturas y liberaciones inválidas, y fugas de memoria relacionadas con las operaciones en tus clases ListNode y LinkedList.
         \item A través de los ejercicios realizados, se observó la importancia de la correcta utilización de las herramientas de compilación como GCC y G++ para manejar adecuadamente las dependencias y particularidades de cada lenguaje.
         \item La implementación de archivos CMakeLists.txt y Makefile en los ejercicios demostró cómo la automatización del proceso de compilación y enlazado mejora la eficiencia del desarrollo y permite una gestión más clara de los proyectos grandes.
         \item El manejo correcto de múltiples archivos en el proceso de compilación y enlazado fue crucial para la construcción exitosa de aplicaciones, destacando la importancia de entender ambos procesos para resolver dependencias y errores de enlazado.
@@ -333,16 +337,31 @@ seguir los siguientes comandos, luego se muestra el contenido del Makefile:
 
 \section{Recomendaciones}
     \begin{itemize}
-        \item Se sugirió evitar métodos recursivos de eliminación en estructuras de datos que potencialmente podrían ser muy largas para prevenir desbordamientos de pila.
-Se enfatizó la importancia de asegurar que cada operación de new tenga su correspondiente delete para evitar fugas de memoria.
-        \item  Es recomendable utilizar herramientas como CMake para gestionar proyectos más complejos, ya que simplifican y estandarizan el proceso de compilación y enlazado en diferentes entornos de desarrollo.
-        \item Mantenerse actualizado sobre las mejores prácticas y nuevas características de las herramientas de compilación puede ayudar a optimizar el rendimiento y la eficiencia del código.
-        \item Realizar pruebas exhaustivas durante y después del proceso de desarrollo para asegurarse de que el código funciona correctamente en diferentes plataformas y configuraciones de compilación.
+		\item Asegurar que cada operación de new tenga su correspondiente
+		delete para evitar fugas de memoria y que esta operación no
+		se realize varias veces sobre el mismo objeto.
+        \item  Es recomendable utilizar herramientas como CMake 
+		Makefile para gestionar proyectos más complejos, ya que simplifican y 
+		estandarizan el proceso de compilación y enlazado en diferentes
+		entornos de desarrollo.
+        \item Mantenerse actualizado sobre las mejores prácticas y 
+		nuevas características de las herramientas de compilación 
+		puede ayudar a optimizar el rendimiento y la eficiencia del 
+		código.
+        \item Implementar pruebas durante y después del proceso
+		de desarrollo para asegurarse de que el código funciona 
+		correctamente.
 	\end{itemize}
+
 
 \renewcommand{\listlistingname}{Indice Source Code}
 \listoflistings
 \addcontentsline{toc}{section}{\listlistingname}
+
+\renewcommand{\listfigurename}{Indice de Capturas de Pantalla}
+\listoffigures 
+\addcontentsline{toc}{section}{\listfigurename} 
+
 
 % \section{Cuadrilla KEKW}
 %    \begin{tabular}{cc}
