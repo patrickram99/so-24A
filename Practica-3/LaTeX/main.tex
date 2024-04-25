@@ -1,5 +1,5 @@
 %package list
-\documentclass[draft]{article}
+\documentclass[]{article}
 \usepackage[top=3cm, bottom=3cm, outer=3cm, inner=3cm]{geometry}
 \usepackage{graphicx}
 \usepackage{url}
@@ -35,7 +35,11 @@
 \usepackage[normalem]{ulem}
 \useunder{\uline}{\ul}{}
 
-\usepackage{minted}
+\usepackage[newfloat]{minted}
+\usepackage{caption}
+
+\newenvironment{code}{\captionsetup{type=listing}}{}
+\SetupFloatingEnvironment{listing}{name=Source Code}
 
 % codigo fuente
 \usepackage{listings}
@@ -70,8 +74,8 @@
 \newcommand{\cscurso}{Sistemas Operativos}
 \newcommand{\csuniversidad}{Universidad La Salle}
 \newcommand{\csescuela}{Escuela Profesional de Ingeniería de Software}
-\newcommand{\cspracnr}{01}
-\newcommand{\cstema}{Programación en C y C++}
+\newcommand{\cspracnr}{03}
+\newcommand{\cstema}{Compilacion en C y C++ en Linux}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -106,7 +110,7 @@
 	\vspace*{10px}
 	
 	\begin{center}	
-		\fontsize{17}{17} \textbf{ ASANSDJNA, \cspracnr}
+		\fontsize{17}{17} \textbf{Practica \cspracnr}
 	\end{center}
 	%\centerline{\textbf{\underline{\Large Título: Informe de revisión del estado del arte}}}
 	%\vspace*{0.5cm}
@@ -141,26 +145,79 @@
 	 \end{itemize}
  
 	\tableofcontents
-
-
-	
-
 \newpage
 
 \section{Ejercicios propuestos}
 Se deberá de probar, compilar y ejecutar los siguientes códigos:
 \subsection{Ejercicio 1}
-
-\inputminted{c}{../proceso.c}
-
-\section{Listing}
+Se crea un archivo Cmake para facilitar la compilacion y ejecucion 
+del codigo, este se presenta a continuacion, y que se puede utilizar 
+con los siguientes comandos desde el directorio con los archivos:
 
 \begin{minted}{bash}
-	$ su rooot
-	$ apt install sudo
-	$ sudo apt install git vim neovim openjdk-17-jdk build-essentials -y
-	$ dpkg -l git vim openjdk-17-jdk gcc g++
+	$ mkdir cmake-build-debug/
+	$ cd cmake-build-debug/
+	$ cmake .. # Buscar el archivo CMakeLists.txt en el directorio superior
+	$ make # Compilar el proyecto
+	$ ./E1 # Ejecutar el proyecto
 \end{minted}
+
+\begin{code}
+	\captionof{listing}{Contenidos Makefile}
+	\inputminted{cmake}{../E1/CMakeLists.txt}
+\end{code}
+
+\subsubsection*{proceso.cpp}
+Este código crea un proceso hijo que imprime un mensaje en pantalla.
+\begin{code}
+	\captionof{listing}{Contenidos Makefile}
+	\inputminted{c}{../E1/proceso.c}
+\end{code}
+
+
+\subsubsection*{ejemplo.cpp}
+Este código utiliza polimorfismo para detectar el tipo de un objeto e imprimir
+una funcion especifica en base a ello:
+\begin{code}
+	\captionof{listing}{Contenidos Makefile}
+	\inputminted{c}{../E1/ejemplo.cpp}
+\end{code}
+
+\subsection{Ejercicio 2}
+Este código recibe 2 argumentos vía línea de comandos, el primero es un 
+número de segundos y el segundo es un mensaje, el código espera el tiempo
+definido por el primer argumento y luego imprime el mensaje en pantalla 
+de forma indefinida.
+\begin{code}
+	\captionof{listing}{E2/main.cpp}
+	\inputminted{cpp}{../E2/main.cpp}
+\end{code}
+
+\includegraphics[scale=0.3,trim={0 0 20cm 20cm},clip]{e2-out.png}  
+
+\subsection{Ejercicio 3}
+En este ejercicio se utiliza un Makefile para compilar el archivo mensaje.c
+y los archivos que este requiere para ejecutarse, para ejecutarlo se deben 
+seguir los siguientes comandos, luego se muestra el contenido del Makefile:
+\begin{minted}{bash}
+	$ make # Compilar el proyecto con el makefile
+	$ ./mensaje # Ejecutar el proyecto
+\end{minted}
+
+\begin{code}
+	\captionof{listing}{E3/Makefile}
+	\label{code:c-code}
+	\inputminted{Makefile}{../E3/Makefile}
+\end{code}
+		
+\includegraphics[scale=0.3,trim={0 0 20cm 20cm},clip]{e2-out.png}  
+
+
+\section{Cuestionario}
+
+
+\renewcommand{\listlistingname}{Indice Source Code}
+\listoflistings
 
 % \section{Cuadrilla KEKW}
 %    \begin{tabular}{cc}
