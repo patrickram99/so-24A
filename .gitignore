@@ -54,6 +54,8 @@ _minted*
 # End of .gitignore
 # Ignore the CMake build directory
 #/cmake-build-debug/
-cmake-build-debug/
+*/cmake-build-debug/
+*/.idea/
+
 # Ignore all .o files
 *.o
