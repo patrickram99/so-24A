@@ -1,4 +1,5 @@
 # Generic files to ignore
+*.zip
 *.log
 *.aux
 *.glo

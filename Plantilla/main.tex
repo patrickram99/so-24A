@@ -31,11 +31,14 @@
 
 \urlstyle{same}
 
-
 \usepackage[normalem]{ulem}
 \useunder{\uline}{\ul}{}
 
-\usepackage{minted}
+\usepackage[newfloat]{minted}
+\usepackage{caption}
+
+\newenvironment{code}{\captionsetup{type=listing}}{}
+\SetupFloatingEnvironment{listing}{name=Source Code}
 
 % codigo fuente
 \usepackage{listings}
